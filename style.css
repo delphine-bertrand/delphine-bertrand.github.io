@@ -1,0 +1,35 @@
+.col-size {
+  width: 67%;
+  background: none;
+}
+
+.col-size-2 {
+  width: 100%;
+  text-align: justify;
+  background: none;
+}
+
+.col-size-3 {
+  width: 100%;
+  text-align: center;
+  background: none;
+}
+
+body {	
+	font-family: ;
+	background-color: #fff;
+}
+
+.rainbow-text {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+style {  
+  text-decoration: none;
+}
+
+
+
