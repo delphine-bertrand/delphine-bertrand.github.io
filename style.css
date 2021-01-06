@@ -4,7 +4,7 @@
 }
 
 .col-size-2 {
-  width: 100%;
+  width: 96%;
   text-align: justify;
   background: none;
 }
@@ -14,25 +14,28 @@
   text-align: center;
   background: none;
 }
+
 .col-size-3 .spacing {
   margin: 0 2rem;
 }
 
-body {	
-	font-family: ;
-	background-color: #fff;
+.col-size-4 {
+  width: 80%;
+  text-align: right;
+  background: none;
+}
+
+body 
+{ 
+  color: #4F4F4F;
+
+  font-size: 90%;
+  background-color: #FFFBF7;
 }
 
 
 img {  
   max-width: 100%;
-}
-
-
-.rainbow-text {
-  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 
