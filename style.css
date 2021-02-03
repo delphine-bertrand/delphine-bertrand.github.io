@@ -20,6 +20,12 @@
 }
 
 .col-size-4 {
+  width: 100%;
+  text-align: right;
+  background: none;
+}
+
+.col-size-5 {
   width: 80%;
   text-align: right;
   background: none;
