@@ -1,5 +1,6 @@
 .col-size {
   width: 67%;
+  text-align: justify;
   background: none;
 }
 
@@ -26,16 +27,21 @@
 }
 
 .col-size-5 {
-  width: 80%;
+  width: 96%;
   text-align: right;
+  background: none;
+}
+
+.col-size-6 {
+  width: 96%;
+  text-align: justify;
   background: none;
 }
 
 body 
 { 
-  color: #4F4F4F;
-  font-size: 90%;
-  background-color: #FFFBF7;
+  font-size: 96%;
+  background-color: #FEFDF5;
 }
 
 
