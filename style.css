@@ -33,10 +33,11 @@
 }
 
 .col-size-6 {
-  width: 96%;
+  margin: 0 2rem;
   text-align: justify;
   background: none;
 }
+
 
 body 
 { 
