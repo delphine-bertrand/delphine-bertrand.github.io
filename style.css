@@ -1,24 +1,59 @@
-#col2 {
-  column-count: 1;
-  width: 66%;
-  text-align: left;
+.col-size {
+  width: 67%;
+  text-align: justify;
+  background: none;
 }
 
- p {
-  word-spacing: 30px;
+.col-size-2 {
+  width: 96%;
+  text-align: justify;
+  background: none;
 }
+
+.col-size-3 {
+  width: 100%;
+  text-align: center;
+  background: none;
+}
+
+.col-size-3 .spacing {
+  margin: 0 2rem;
+}
+
+.col-size-4 {
+  width: 100%;
+  text-align: right;
+  background: none;
+}
+
+.col-size-5 {
+  width: 96%;
+  text-align: right;
+  background: none;
+}
+
+.col-size-6 {
+  margin: 0 2rem;
+  text-align: justify;
+  background: none;
+}
+
 
 body 
 { 
-  width: 99%;
-  font-size: 80%;
-  color: #313652;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "Helvetica Light", "Arial",  sans-serif;
- 
+  font-size: 96%;
+  background-color: #FEFDF5;
 }
+
 
 img {  
   max-width: 100%;
 }
+
+
+style {  
+  text-decoration: none;
+}
+
+
+
