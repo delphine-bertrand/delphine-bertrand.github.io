@@ -1,21 +1,15 @@
 #col2 {
-  column-count: 1;
-  width: 66%;
-  text-align: left;
-}
-
- p {
-  word-spacing: 30px;
+  column-count: 2;
 }
 
 body 
 { 
   width: 99%;
-  font-size: 80%;
+  font-size: 70%;
   color: #313652;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Helvetica Light", "Arial",  sans-serif;
+  font-family: "Avenir",  sans-serif;
  
 }
 
