@@ -2,17 +2,25 @@
   column-count: 2;
 }
 
+text
+{
+justify-content: space-around;
+}
+
 body 
 { 
   width: 99%;
   font-size: 70%;
-  color: #313652;
+  color: ;
   margin-left: auto;
   margin-right: auto;
-  font-family: "Avenir",  sans-serif;
+  font-family: "Courier";
  
 }
 
 img {  
   max-width: 100%;
 }
+
+
+color#313652
