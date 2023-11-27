@@ -23,4 +23,9 @@ img {
 }
 
 
+.colonne1, .colonne2, .colonne3 {
+    width:33%;
+    float:left;
+}
+
 color#313652
