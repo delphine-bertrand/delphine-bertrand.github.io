@@ -1,0 +1,65 @@
+#col2 {
+  column-count: 2;
+}
+
+text
+{
+justify-content: space-around;
+}
+
+body 
+{ 
+  width: 99%;
+  font-size: 70%;
+  color: ;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Courier";
+  color: #ED2139;
+  background-image: url("images/horizon-14.svg");
+}
+
+.image-projet {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px; /* Ajoute un espacement entre les images */
+}
+
+#ED21B3
+
+#A3DFFC
+
+#B7DBFC
+
+color#313652
+  
+<rect xmlns="http://www.w3.org/2000/svg" fill="#fea0c9" width="1200" height="800"/>
+
+<rect xmlns="http://www.w3.org/2000/svg" fill="#ffff9b" y="576" width="1200" height="224"/>
+
+
+ box-sizing
+    content-box
+    display
+    inline
+    float
+    none
+    line-height
+    normal
+    position
+    static
+    z-index
+    auto
+
+
+
+
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" shape-rendering="crispEdges"><rect fill="#fea0c9" width="1200" height="800"/><rect fill="#ffff9b" y="576" width="1200" height="224"/></svg>
+
+
+.colonne1, .colonne2, .colonne3 {
+    width:33%;
+    float:left;
+}
