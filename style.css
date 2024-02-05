@@ -2,6 +2,12 @@
   column-count: 2;
 }
 
+#text { 
+color: black;
+text-justify: inter-character;
+max-width: 63%;
+}
+
 text
 {
 justify-content: space-around;
@@ -11,12 +17,21 @@ body
 { 
   width: 99%;
   font-size: 70%;
-  color: ;
   margin-left: auto;
   margin-right: auto;
   font-family: "Courier";
   color: #ED2139;
   background-image: url("images/horizon-14.svg");
+}
+
+
+
+
+.image-projet {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1px;
 }
 
 #ED21B3
@@ -46,9 +61,7 @@ color#313652
     auto
 
 
-img {  
-  max-width: 100%;
-}
+
 
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" shape-rendering="crispEdges"><rect fill="#fea0c9" width="1200" height="800"/><rect fill="#ffff9b" y="576" width="1200" height="224"/></svg>
