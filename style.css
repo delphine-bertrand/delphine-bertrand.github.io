@@ -6,11 +6,18 @@
 color: black;
 text-justify: inter-character;
 max-width: 63%;
+text-align: justify;
+  text-justify: inter-word;
 }
 
 text
 {
 justify-content: space-around;
+}
+
+div {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 body 
