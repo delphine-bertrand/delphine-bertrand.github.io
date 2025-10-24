@@ -10,10 +10,19 @@ text-align: justify;
   text-justify: inter-word;
 }
 
+#text-2 { 
+color: black;
+}
+
 text
 {
 justify-content: space-around;
 }
+
+#text-2 { 
+color: black;
+}
+
 
 div {
   text-align: justify;
