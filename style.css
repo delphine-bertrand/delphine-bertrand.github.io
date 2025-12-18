@@ -2,53 +2,57 @@
   column-count: 2;
 }
 
-#text { 
-color: black;
-text-justify: inter-character;
-max-width: 63%;
-text-align: justify;
-  text-justify: inter-word;
+#h1 {
+  text-align: right;
 }
 
-#text-2 { 
-color: black;
+#h2 {
+  text-align: center;
+  font-size: 150%;
+  margin-left: 140px;
+  margin-right: 140px;
 }
+
+#zone {
+  align-content: center;
+  max-width: 66%;
+ }
+
+#h3 {
+  text-align: margin-left;
+  font-size: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  scroll-margin-top: 20px;
+}
+
+
+ 
 
 text
 {
 justify-content: space-around;
 }
 
-#text-2 { 
-color: black;
-}
-
-
-div {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
 body 
 { 
   width: 99%;
   font-size: 70%;
+  color: ;
   margin-left: auto;
   margin-right: auto;
   font-family: "Courier";
-  color: #ED2139;
   background-image: url("images/horizon-14.svg");
 }
-
-
-
 
 .image-projet {
     max-width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 1px;
+    margin-bottom: 10px; /* Ajoute un espacement entre les images */
 }
+
+  color: #ED2139;
 
 #ED21B3
 
