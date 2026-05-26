@@ -45,50 +45,32 @@ body.home .header {
 /* LOGO HOME */
 body.home .logo {
   color: white;
-  font-size: 60px;
+  font-size: 40px;
   letter-spacing: 0.03em;
 }
 
 /* SUBTITLE */
 body.home .subtitle {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 8px;
   color: white;
-  opacity: 0.85;
-}
-
-/* TEXTE CENTRAL HOME */
-body.home .overlay-text {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  text-align: center;
-  max-width: 700px;
-  font-size: 20px;
-  line-height: 1.6;
-  font-weight: 300;
-  opacity: 0.9;
-  color: white;
-}
-
-/* HEADER HOME */
-body.home .header {
-  position: fixed;
-  left: 60px;
-  z-index: 20;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 /* MENU DROITE HOME */
-body.home .menu {
+body.home .menu-container {
   position: fixed;
-  top: 60px;
-  right: 60px;
-  font-size: 16px;
-  z-index: 20;
-  opacity: 0.8;
+  top: 120px;
+  right: 120px;
+  z-index: 18;
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* espace entre les deux menus */
+}
+
+body.home .menu {
+  font-size: 18px;
+  opacity: 1;
 }
 
 body.home .menu a {
@@ -97,34 +79,11 @@ body.home .menu a {
   opacity: 0.85;
   text-decoration: none;
   transition: opacity 0.2s ease;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body.home .menu a:hover {
-  opacity: 1;
-}
-
-/* MENU BAS HOME */
-body.home .menu-bottom {
-  position: fixed;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 25px;
-  font-size: 16px;
-  z-index: 20;
-}
-
-body.home .menu-bottom a {
-  color: white;
-  opacity: 0.8;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
-
-body.home .menu-bottom a:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 /* CAPTION HOME */
@@ -132,6 +91,7 @@ body.home .caption {
   font-size: 16px;
   opacity: 0.6;
 }
+
 
 
 /* =========================
@@ -182,13 +142,13 @@ body {
   text-decoration: none;
   color: #111;
   font-family: "Courier New", Courier, monospace;
-  font-size: 60px;
+  font-size: 40px;
   letter-spacing: 0.02em;
 }
 
 /* SUBTITLE */
 .subtitle {
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 8px;
   color: #666;
 }
@@ -235,9 +195,9 @@ body {
 
 .menu-top {
   position: fixed;
-  top: 60px;
-  right: 60px;
-  font-size: 16px;
+  top: 120px;
+  right: 120px;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -252,12 +212,12 @@ body {
 }
 
 
-
 .menu-title {
-  font-size: 13px;
+  font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  opacity: 0.50;
+  color:  #222;
+  opacity: 0.80;
   margin-bottom: 10px;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
