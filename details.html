@@ -2,15 +2,34 @@
 
  <html>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const elements = document.querySelectorAll(".js-hide-on-scroll");
+
+  function update() {
+    const hide = window.scrollY > 10;
+
+    elements.forEach(el => {
+      el.classList.toggle("is-hidden", hide);
+    });
+  }
+
+  window.addEventListener("scroll", update);
+  update();
+
+});
+</script>
+
  <body class="home">
 
-<header class="header">
+<header class="header js-hide-on-scroll">
   <a class="logo" href="index.html">DELPHINE BERTRAND</a>
   <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
   <link rel="stylesheet" href="style.css">
 </header>
 
-<div class="menu-container">  
+<div class="menu-container js-hide-on-scroll">
   <nav class="menu">    
     <a href="about.html">About</a>   
     <a href="my-work.html">Work</a>
@@ -26,13 +45,9 @@
 
 <main class="hero">
 
+  <main class="page-content">
   <section class="overlay-text">
-    <p>
     In progress...
-    </p>
-
-    <br> 
-
     
   </section>
 

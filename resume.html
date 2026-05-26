@@ -11,34 +11,30 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const header = document.querySelector(".header");
-  const menuTop = document.querySelector(".menu-top");
-  const menuBottom = document.querySelector(".menu-bottom");
+  const elements = document.querySelectorAll(".js-hide-on-scroll");
 
-  function updateUI() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  function update() {
+    const hide = window.scrollY > 10;
 
-    const hide = scrollTop > 10;
-
-    header?.classList.toggle("is-hidden", hide);
-    menuTop?.classList.toggle("is-hidden", hide);
-    menuBottom?.classList.toggle("is-hidden", hide);
+    elements.forEach(el => {
+      el.classList.toggle("is-hidden", hide);
+    });
   }
 
-  window.addEventListener("scroll", updateUI);
-  updateUI(); // état initial
+  window.addEventListener("scroll", update);
+  update();
 
 });
 </script>
 
 <body>
 
-<header class="header">
+<<header class="header js-hide-on-scroll">
   <a class="logo" href="index.html">DELPHINE BERTRAND</a>
   <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
 </header>
 
-<nav class="menu-top">
+<nav class="menu-top js-hide-on-scroll">
 <p>
   <a href="about.html">About</a>
   <a href="my-work.html">Work</a>

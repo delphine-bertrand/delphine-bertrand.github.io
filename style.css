@@ -2,15 +2,37 @@
    BASE GLOBAL
 ========================= */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: Helvetica , Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.6;
   cursor: default;
+  overflow-x: hidden;
 }
 
 /* =========================
-   HOME (IMMERSIF)
+   SCROLL HIDE GLOBAL
+========================= */
+
+.is-hidden {
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none;
+}
+
+.header,
+.menu-container,
+.menu-top,
+.menu-bottom {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* =========================
+   HOME
 ========================= */
 
 body.home {
@@ -18,7 +40,6 @@ body.home {
   color: white;
 }
 
-/* IMAGE FULLSCREEN */
 body.home .bg-image {
   position: fixed;
   top: 0;
@@ -30,19 +51,17 @@ body.home .bg-image {
   filter: brightness(0.70);
 }
 
-/* HEADER */
+/* HEADER HOME */
 body.home .header {
   position: fixed;
   top: 60px;
   left: 60px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   z-index: 20;
 }
 
-
-/* LOGO HOME */
+/* LOGO */
 body.home .logo {
   color: white;
   font-size: 40px;
@@ -54,23 +73,17 @@ body.home .subtitle {
   font-size: 18px;
   margin-top: 8px;
   color: white;
-  opacity: 1;
 }
 
-/* MENU DROITE HOME */
+/* MENU HOME */
 body.home .menu-container {
   position: fixed;
   top: 120px;
   right: 120px;
-  z-index: 18;
   display: flex;
   flex-direction: column;
-  gap: 80px; /* espace entre les deux menus */
-}
-
-body.home .menu {
-  font-size: 18px;
-  opacity: 1;
+  gap: 80px;
+  z-index: 18;
 }
 
 body.home .menu a {
@@ -78,82 +91,36 @@ body.home .menu a {
   color: white;
   opacity: 0.85;
   text-decoration: none;
-  transition: opacity 0.2s ease;
   font-size: 18px;
 }
 
-body.home .menu a:hover {
-  opacity: 0.85;
-}
-
-/* CAPTION HOME */
-body.home .caption {
-  font-size: 16px;
-  opacity: 0.6;
-}
-
-
-
 /* =========================
-   PAGES PROJETS (DONNER DU TEMPS / DETAILS)
-========================= */
-
-
-/* TEXTES */
-.page p {
-  top: 300px;
-  color: #222;
-  font-size: 13px;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-
-/* =========================
-   PAGES EDITORIALES (ABOUT / WORK / ETC.)
+   PAGES GLOBAL
 ========================= */
 
 body {
   background: #faf0e6;
-
   color: #222;
   font-weight: 300;
   letter-spacing: 0.01em;
-  
 }
 
-.header {
-  position: fixed;
-  top: 60px;
-  left: 60px;
-  z-index: 50;
-
-  transition: opacity 0.3s ease, transform 0.3s ease;
+/* CENTRAGE PAGE TEXT */
+.page-content {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 40px 120px;
 }
 
-.header.is-hidden {
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
+.overlay-text {
+  width: 50%;
+  max-width: 700px;
+  text-align: center;
 }
 
-/* LOGO PAGES */
-.logo {
-  text-decoration: none;
-  color: #111;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 40px;
-  letter-spacing: 0.02em;
-}
-
-/* SUBTITLE */
-.subtitle {
-  font-size: 18px;
-  margin-top: 8px;
-  color: #666;
-}
-
-/* PAGE CONTENT */
+/* PAGE CLASS */
 .page {
   max-width: 720px;
   margin: 180px auto 100px;
@@ -167,81 +134,42 @@ body {
   margin-bottom: 20px;
 }
 
-.page h1 {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 40px;
-}
-
-/* LEAD */
 .lead {
   font-size: 18px;
 }
 
-/* CAPTION PAGES */
-.caption,
-.hero-caption {
-  font-size: 13px;
-  opacity: 0.6;
+/* HEADINGS */
+h1, h2, h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: normal;
+}
+
+/* LOGO PAGES */
+.logo {
+  text-decoration: none;
+  color: #111;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+}
+
+/* SUBTITLE */
+.subtitle {
+  font-size: 18px;
+  color: #666;
 }
 
 /* =========================
-   NAVIGATION (PAGES)
-========================= */
-
-/* =========================
-   MENU TOP RIGHT (OFFERS)
+   MENUS
 ========================= */
 
 .menu-top {
   position: fixed;
   top: 120px;
   right: 120px;
-  font-size: 18px;
   display: flex;
   flex-direction: column;
-  text-decoration: none;
-  color: #222;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.menu-top.is-hidden {
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-}
-
-
-.menu-title {
   font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color:  #222;
-  opacity: 0.80;
-  margin-bottom: 10px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
-.menu-title.is-hidden {
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-}
-
-.menu-top a {
-  display: block;
-  text-decoration: none;
-  opacity: 0.75;
-  margin-bottom: 6px;
-}
-
-.menu-top a:hover {
-  opacity: 1;
-}
-
-/* =========================
-   MENU BOTTOM CENTER
-========================= */
 
 .menu-bottom {
   position: fixed;
@@ -251,76 +179,41 @@ body {
   display: flex;
   gap: 25px;
   font-size: 16px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.menu-bottom.is-hidden {
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-}
-
-.menu-bottom a {
-  text-decoration: none;
-  opacity: 0.75;
+/* LINKS */
+a {
   color: inherit;
-  
+  text-decoration: none;
 }
 
-
-/* évite bleu/violet visited */
 a:visited {
   color: inherit;
 }
 
-.menu-bottom a:hover {
-  opacity: 1;
-}
+/* =========================
+   GALLERY / PROJECTS
+========================= */
 
-/* CONTAINER */
 .curation {
   padding-top: 180px;
-    max-width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
-  
 }
 
-/* PROJET */
 .project {
   margin-bottom: 180px;
   text-align: center;
   width: 60vw;
 }
 
-/* IMAGE */
 .project img {
-
   width: 60vw;
   max-width: 1100px;
-  align-items: center;
   display: block;
   margin: 40px auto;
-
   transition: transform 0.6s ease, opacity 0.4s ease;
 }
-
-
-/* HOVER (très subtil) */
-.project a:hover img {
-  transform: scale(1.01);
-  opacity: 0.92;
-}
-
-/* CAPTION */
-.caption {
-  margin-top: 12px;
-
-  font-size: 16px;
-  opacity: 0.6;
-
-  letter-spacing: 0.02em;
-}
-
 
 .video {
   position: relative;
@@ -335,13 +228,100 @@ a:visited {
   height: 100%;
 }
 
-
 /* =========================
-   TYPO GLOBALE
+   RESPONSIVE (IMPORTANT)
 ========================= */
 
-h1, h2, h3 {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: normal;
-  letter-spacing: 0.02em;
+/* TABLET */
+@media (max-width: 1024px) {
+
+  .overlay-text {
+    width: 70%;
+  }
+
+  .project,
+  .project img {
+    width: 80vw;
+  }
+
+  .menu-top {
+    right: 40px;
+    top: 80px;
+  }
+
+  body.home .header {
+    top: 40px;
+    left: 40px;
+  }
+
+  body.home .menu-container {
+    right: 40px;
+    top: 100px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .overlay-text {
+    width: 90%;
+  }
+
+  .page {
+    padding: 0 20px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .page p {
+    font-size: 15px;
+  }
+
+  body.home .logo {
+    font-size: 28px;
+  }
+
+  body.home .subtitle {
+    font-size: 14px;
+  }
+
+  .menu-top,
+  .menu-container {
+    right: 20px;
+    top: 60px;
+    font-size: 14px;
+  }
+
+  .menu-bottom {
+    font-size: 14px;
+    bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .project {
+    width: 90vw;
+  }
+
+  .project img {
+    width: 90vw;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .overlay-text {
+    width: 95%;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
 }

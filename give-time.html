@@ -2,15 +2,34 @@
 
  <html>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const elements = document.querySelectorAll(".js-hide-on-scroll");
+
+  function update() {
+    const hide = window.scrollY > 10;
+
+    elements.forEach(el => {
+      el.classList.toggle("is-hidden", hide);
+    });
+  }
+
+  window.addEventListener("scroll", update);
+  update();
+
+});
+</script>
+
  <body class="home">
 
-<header class="header">
+<header class="header js-hide-on-scroll">
   <a class="logo" href="index.html">DELPHINE BERTRAND</a>
   <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
   <link rel="stylesheet" href="style.css">
 </header>
 
-<div class="menu-container">  
+<div class="menu-container js-hide-on-scroll">
   <nav class="menu">    
     <a href="about.html">About</a>   
     <a href="my-work.html">Work</a>
@@ -23,21 +42,39 @@
     <a href="details.html">Detail</a>
     </nav></div>
 
-
-
 <main class="hero">
 
+<main class="page-content">
   <section class="overlay-text">
 
-    <h1>Give time</h1>
+Give Time <br><br>
+
+Show <br><br>
+
+* A clear space—a meadow—arranged in an installation composed with votive handmade candles or sculptures or different materials as flowers, sand, salt,… <br><br>
+
+Or <br><br>
+
+Ceremony <br><br>
+
+* A clear space—a meadow—arranged in an installation composed with votive handmade candles or sculptures or different materials as flowers, sand, salt,…<br>
+* The artist leads a ceremony or dance performance with Shin Shendo, allowing participants to experience a moment of peace and stillness. They will be given a moment of time.<br><br>
+
+
+I am happy to offer my services for:<br>
+Companies<br>
+Private individuals<br>
+Schools<br>
+Exhibitions - Opening Receptions<br>
+Etcetera<br><br>
+
+Come to me for more information<br><br>
+
+<a href="contact.html">Contact</a><br><br>
 
     
-
-    
-    
-
-  </section>
-
+ </section>
 </main>
+
 
 </body>
