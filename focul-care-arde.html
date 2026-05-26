@@ -1,37 +1,61 @@
 <!DOCTYPE html>
+<html lang="en">
 
- <html>
+<head>
+  <meta charset="utf-8">
+  <title>Delphine Bertrand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
 
- 	<head>
- 		<meta charset="utf-8">
- 		<title>delphine bertrand</title>
- 		<link rel="stylesheet" href="style.css">
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const header = document.querySelector(".header");
+  const menuTop = document.querySelector(".menu-top");
+  const menuBottom = document.querySelector(".menu-bottom");
 
- 	<body>
+  function updateUI() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
- 		<div id="h3">
- 		<div id="col2">
-		<a style="text-decoration:none" href="index.html">DELPHINE C. BERTRAND</a> <br><br>
-		visual artist<br>indoor landscape gardener<br><br> 
-		<a style="text-decoration:none" href="elena-cardin.html">TEXT BY ELENA CARDIN</a> <br><br> 
+    const hide = scrollTop > 10;
 
-		<div id="h1">
-		<a style="text-decoration:none" href="my-path.html">MY PATH</a> <br><br>
-		<a style="text-decoration:none" href="contact.html">CONTACT</a> <br><br> 
-		</div> </div><br><br><br>
+    header?.classList.toggle("is-hidden", hide);
+    menuTop?.classList.toggle("is-hidden", hide);
+    menuBottom?.classList.toggle("is-hidden", hide);
+  }
 
- 		<div id="zone">
+  window.addEventListener("scroll", updateUI);
+  updateUI(); // état initial
 
- 		<i>Focul care Arde (The Fire that Burns)</i><br><br> 
-		Various materials, text written along the trip from France to Romania, translate from French to Romanian and prints on sheets to take away, <br>audio speakers broadcasting a song composed by the artist Harilay Rabanjamina for the installation
+});
+</script>
 
-		<br><br>
+<body>
 
-		Timişoara French Institute, Romania<br>
-		February 2020<br><br><br>
+<header class="header">
+  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+  <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+</header>
+
+<nav class="menu-top">
+<p>
+  <a href="about.html">About</a>
+  <a href="my-work.html">Work</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+ </p>
+ <p>
+  <p class="menu-title">Offers</p>
+  <a href="give-time.html">Give time</a>
+  <a href="details.html">Details</a>
+</p>
+</nav>
+
+<main class="page">
+<br>
+
+<section class="project">
 
 		<img src="images/focul-care-arde/P1010153 copie.jpg"class="image-projet"/><br><br>
 
@@ -104,7 +128,21 @@
 
  		<img src="images/focul-care-arde/P1010209 copie.jpg"class="image-projet"/>
 
+ 	<p>
+ 		<i>Focul care Arde (The Fire that Burns)</i><br><br> 
+		Various materials, text written along the trip from France to Romania, translate from French to Romanian and prints on sheets to take away, <br>audio speakers broadcasting a song composed by the artist Harilay Rabanjamina for the installation
+
+		<br><br>
+
+		Timişoara French Institute, Romania<br>
+		February 2020
+	</p>
+
+		<br><br> 
+
  		<a style="text-decoration:none" href="https://fr-fr.facebook.com/InstitutulFrancezTimisoara/photos/a.653958568015605/2744889058922535/?type=3&theater">Institutul Francez Timișoara, Facebook publications</a>
+
+ 	</section>
 
  
 

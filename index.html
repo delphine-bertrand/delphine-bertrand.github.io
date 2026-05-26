@@ -2,91 +2,92 @@
 
  <html>
 
- 	<head>
- 		<meta charset="utf-8">
- 		<title>delphine bertrand</title>
- 		<link rel="stylesheet" href="style.css">
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
- 	<body>
- 		<div id="h3">
- 		<div id="col2">
-		<a style="text-decoration:none" href="index.html">DELPHINE C. BERTRAND</a> <br><br>
-		visual artist<br>indoor landscape gardener<br><br> 
-		<a style="text-decoration:none" href="elena-cardin.html">TEXT BY ELENA CARDIN</a> <br><br> 
+  const header = document.querySelector(".header");
+  const menuTop = document.querySelector(".menu-top");
+  const menuBottom = document.querySelector(".menu-bottom");
 
-		<div id="h1">
-		<a style="text-decoration:none" href="my-path.html">MY PATH</a> <br><br>
-		<a style="text-decoration:none" href="contact.html">CONTACT</a> <br><br> 
-		</div> </div><br>
+  function updateUI() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+    const hide = scrollTop > 10;
 
-		<img src="images/la-zone-perilunaire/la-zone-perilunaire.jpg" class="image-projet">* La zone périlunaire (Lunar peripheral space),</i> 2019</a><br><br><br><br><br><br><br><br><br>
+    header?.classList.toggle("is-hidden", hide);
+    menuTop?.classList.toggle("is-hidden", hide);
+    menuBottom?.classList.toggle("is-hidden", hide);
+  }
 
-		<div id="h2">
-		I seek to embellish the world so that it may become more livable; I seek to bring poetry and transcendence into what feels to me too concrete or too rigid.<br><br>
-		I try to offer a different imagery, as a response to modernity, to excessive structuring, and to imposed knowledge.<br><br>
-		I look for an entry point, an exit, a space set apart, a place where one can rest.
-		I imagine worlds<br><br>
-		— an ideal world, an imaginary world.<br><br>
-		And sometimes, because this process is a vast adventure, I lose myself in the corners of my psyche, somewhere between shadow and light.<br><br><br>
-		Delphine C. Bertrand<br><br><br><br><br><br><br><br><br><br><br>
-		</div>
+  window.addEventListener("scroll", updateUI);
+  updateUI(); // état initial
 
-		<div id="zone">
-		
-		PROJECTS<br><br>
+});
+</script>
 
 
-		<a style="text-decoration:none" href="fire-walk-with-me.html"><img src="images/fire-walk-with-me/delphine_claire_bertrand_9520.jpg" class="image-projet">* Untiteled<i> (Fire Walk With Me), 2025</a><br><br><br>
+<audio id="ambientSound" loop>
+  <source src="audio/30 MINUTES Ocean Sounds for Deep Sleep _ Waves Crashing onto the Beach.mp3" type="audio/mpeg">
+</audio>
 
-		<a style="text-decoration:none" href="ici-repose-lamour.html"><img src="images/ici-repose-lamour/margot/SONJ-WEB©margotmontigny-2451.jpg" class="image-projet"><i>* Ici repose Lamour (Here lies Love),</i> with the participation of Robert Kirov, 2024</a><br><br><br>
+<script>
+const audio = document.getElementById("ambientSound");
 
-		<a style="text-decoration:none" href="tissages-fleurs.html"><img src="images/tissages-fleurs/tissages-fleurs4.jpg" class="image-projet"><i>* Le Bonheur (Happiness),</i> 2022-2024</a><br><br><br>
+// volume constant
+audio.volume = 0.04;
+audio.playbackRate = 0.80;
 
-		<a style="text-decoration:none" href="jouer.html"><img src="images/jouer/DSC05964.jpeg" class="image-projet"><i>* Jouer (To Play),</i> 2022</a><br><br><br>
+// restaurer état
+const wasPlaying = localStorage.getItem("audioPlaying");
 
+if (wasPlaying === "true") {
+  audio.play().catch(() => {});
+}
 
-		<a style="text-decoration:none" href="la-chance.html"><img src="images/la-chance/DSC05731.jpg" class="image-projet"><i>* La Chance (Luck),</i> with Kahina Loumi, 2021</a><br><br><br>
-
-		<a style="text-decoration:none" href="focul-care-arde.html"><img src="images/focul-care-arde/P1010258 copie.jpg" class="image-projet"><i>* Focul care Arde (The Fire that Burns),</i> 2020</a><br><br><br>
-
-
-		<a style="text-decoration:none" href="la-zone-perilunaire.html"><img src="images/la-zone-perilunaire/P1030959 copie.jpg" class="image-projet"><i>* La zone périlunaire (Lunar peripheral space),</i> 2019</a><br><br><br>
-
-
-		<a style="text-decoration:none" href="le-chercheur-d'or.html"><img src="images/le-chercheur-d'or/IMG_5340.JPG" class="image-projet"><i>* Le chercheur d'or (The gold digger),</i> 2018</a><br><br><br>
-		
-		<br><a style="text-decoration:none" href="la-reserve.html"><img src="images/la-reserve/013_LaGrandeDiagonale©JeanchristopheLett.jpg" class="image-projet"><i>* La Réserve (Reserve),</i> during<i> La Grande Diagonale</i>, curated by Bruno Peinado, 2021</a><br><br><br><br>
-
-
-		SOME OTHER WORKS<br><br>
-		<a style="text-decoration:none" href="jardin-hiver.html"> <img src="images/essayer-de-la-sculpture/essayer de la sculpture 1.JPG" class="image-projet"><i>* Jardin d'hiver (Winter garden),</i> during <i> Essayer de la sculpture</i> Studio Plijadur, 2020<br><br><br>
-
-		<a style="text-decoration:none" href="etendues.html"> <img src="images/etendues/dnsep detail etendue.jpg" class="image-projet">* Selected installations works until 2018<br><br><br><br>
-
-		<a style="text-decoration:none" href="sculptures.html"> <img src="images/sculptures/5a eesab dancing warluss.jpg" class="image-projet">* Selected sculptures works until 2018</a><br><br><br>
+// activation unique
+document.addEventListener("click", () => {
+  audio.play().then(() => {
+    localStorage.setItem("audioPlaying", "true");
+  });
+}, { once: true });
+</script>
 
 
-		<div id="img">
-		<img src="images/focul-care-arde/institut-francais-timisoara.jpg" class="image-projet">
-		</div>
+ <body class="home">
 
- 		<i>Focul care Arde</i>, work in progress <br><br>
+<header class="header">
+  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+  <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+  <link rel="stylesheet" href="style.css">
+</header>
 
- 		Various materials, audio speakers broadcasting a song composed by the artist Harilay Rabanjamina 
-	 	for the installation, text written along the trip from France to Romania, translate from French to Romanian and prints on sheets to take away <br><br>
+<nav class="menu">
+  <a href="about.html">About</a>
+  <a href="my-work.html">Work</a>
+  <a href="writings.html">Writings</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+  <br><br>
+  <p class="menu-title">Offers</p>
+  <a href="give-time.html">Give time</a>
+  <a href="details.html">Details</a>
+</nav>
 
- 		Timişoara French Institute, Romania <br>
-		February 2019 <br><br> 
+<main class="hero">
 
+<audio id="ambientSound" loop>
+  <source src="audio/30 MINUTES Ocean Sounds for Deep Sleep _ Waves Crashing onto the Beach.mp3" type="audio/mpeg">
+</audio>
 
-		</div>
-		</div>
+  <img src="images/fire_walk_with_me/delphine_bertrand.jpg" class="bg-image">
 
+  <section class="overlay-text">
+    <p>
+      I seek to embellish the world<br>
+      so that it may become more livable
+    </p>
+  </section>
 
- 	</body>
+</main>
 
-
- </html>
+</body>

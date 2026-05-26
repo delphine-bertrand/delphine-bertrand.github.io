@@ -1,35 +1,61 @@
 <!DOCTYPE html>
+<html lang="en">
 
- <html>
+<head>
+  <meta charset="utf-8">
+  <title>Delphine Bertrand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
 
- 	<head>
- 		<meta charset="utf-8">
- 		<title>delphine bertrand</title>
- 		<link rel="stylesheet" href="style.css">
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+  const header = document.querySelector(".header");
+  const menuTop = document.querySelector(".menu-top");
+  const menuBottom = document.querySelector(".menu-bottom");
 
- 	<body>
+  function updateUI() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
- 		<div id="h3">
- 		<div id="col2">
-		<a style="text-decoration:none" href="index.html">DELPHINE C. BERTRAND</a> <br><br>
-		visual artist<br>indoor landscape gardener<br><br> 
-		<a style="text-decoration:none" href="elena-cardin.html">TEXT BY ELENA CARDIN</a> <br><br> 
+    const hide = scrollTop > 10;
 
-		<div id="h1">
-		<a style="text-decoration:none" href="my-path.html">MY PATH</a> <br><br>
-		<a style="text-decoration:none" href="contact.html">CONTACT</a> <br><br> 
-		</div> </div><br><br><br>
-		
-		<div id="zone">
+    header?.classList.toggle("is-hidden", hide);
+    menuTop?.classList.toggle("is-hidden", hide);
+    menuBottom?.classList.toggle("is-hidden", hide);
+  }
 
- 		<i>Le Bonheur (Happiness)</i><br><br> 
-		Flower weaving experiments<br>
-		2022-2024
+  window.addEventListener("scroll", updateUI);
+  updateUI(); // état initial
 
-		<br><br><br>
+});
+</script>
+
+<body>
+
+<header class="header">
+  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+  <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+</header>
+
+<nav class="menu-top">
+<p>
+  <a href="about.html">About</a>
+  <a href="my-work.html">Work</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+ </p>
+ <p>
+  <p class="menu-title">Offers</p>
+  <a href="give-time.html">Give time</a>
+  <a href="details.html">Details</a>
+</p>
+</nav>
+
+<main class="page">
+<br>
+
+<section class="project">
 
 		<img src="images/tissages-fleurs/tissages-fleurs4.jpg"class="image-projet"/><br><br>
 
@@ -39,15 +65,14 @@
 
  		<img src="images/tissages-fleurs/tissages-fleurs7.jpg"class="image-projet"/><br><br>
 
- 		<img src="images/tissages-fleurs/tissages-fleurs6.jpg"class="image-projet"/><br><br>
-
- 		</div>
-
  		<img src="images/tissages-fleurs/tissages-fleurs8.jpg"class="image-projet"/><br><br>
+  <p>
+    <i>Le Bonheur (Happiness)</i><br><br> 
+    Flower weaving experiments<br>
+    2022-2024
+  </p> 
 
- 	</div>
+</main>
 
- 	</body>
-
-
- </html>
+</body>
+</html>

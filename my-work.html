@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Delphine Bertrand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const header = document.querySelector(".header");
+  const menuTop = document.querySelector(".menu-top");
+  const menuBottom = document.querySelector(".menu-bottom");
+
+  function updateUI() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    const hide = scrollTop > 10;
+
+    header?.classList.toggle("is-hidden", hide);
+    menuTop?.classList.toggle("is-hidden", hide);
+    menuBottom?.classList.toggle("is-hidden", hide);
+  }
+
+  window.addEventListener("scroll", updateUI);
+  updateUI(); // état initial
+
+});
+</script>
+
+<body>
+
+<header class="header">
+  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+  <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+</header>
+
+<nav class="menu-top">
+<p>
+  <a href="about.html">About</a>
+  <a href="my-work.html">Work</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+ </p>
+ <p>
+  <p class="menu-title">Offers</p>
+  <a href="give-time.html">Give time</a>
+  <a href="details.html">Details</a>
+</p>
+</nav>
+
+<main class="page">
+
+  <audio id="ambientSound" loop>
+  <source src="audio/30 MINUTES Ocean Sounds for Deep Sleep _ Waves Crashing onto the Beach.mp3" type="audio/mpeg">
+</audio>
+
+  <br>
+  
+  <section class="project">
+
+    <p class="caption">SELECTED WORKS</p>
+
+    <a href="fire-walk-with-me.html">
+      <img src="images/fire_walk_with_me/delphine_bertrand.jpg">
+    </a>
+    <p class="caption"><i>Fire Walk With Me,</i> 2025</p>
+  </section>
+
+  <section class="project">
+    <a style="text-decoration:none" href="focul-care-arde.html">
+      <img src="images/focul-care-arde/P1010258 copie.jpg" class="image-projet">
+    </a>
+    <p class="caption"><i>Focul care Arde (The Fire that Burns),</i> 2020</p>
+  </section>
+
+  <section class="project">
+    <a href="la-zone-perilunaire.html">
+      <img src="images/la-zone-perilunaire/P1030959 copie.jpg">
+    </a>
+    <p class="caption"><i>La zone périlunaire,</i> 2019</p>
+  </section>
+
+  <section class="project">
+    <a style="text-decoration:none" href="le-chercheur-d'or.html">
+      <img src="images/le-chercheur-d'or/IMG_5340.JPG" class="image-projet">
+    </a>
+    <p class="caption"><i>Le chercheur d'or (The gold digger),</i> 2018</p>
+  </section>
+
+  <section class="project">
+    <a href="ici-repose-lamour.html">
+      <img src="images/ici-repose-lamour/margot/SONJ-WEB©margotmontigny-2451.jpg">
+    </a>
+    <p class="caption"><i>Ici repose l’amour,</i> 2024</p>
+
+  <section class="project">
+    <a href="tissages-fleurs.html">
+      <img src="images/tissages-fleurs/tissages-fleurs4.jpg">
+    </a>
+    <p class="caption"><i>Le Bonheur (Happiness),</i> 2022-2024</p>
+    
+
+
+
+
+  </section>
+
+</main>
+
+</body>
+</html>

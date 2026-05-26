@@ -1,60 +1,87 @@
 <!DOCTYPE html>
+<html lang="en">
 
- <html>
+<head>
+  <meta charset="utf-8">
+  <title>Delphine Bertrand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
 
- 	<head>
- 		<meta charset="utf-8">
- 		<title>delphine bertrand</title>
- 		<link rel="stylesheet" href="style.css">
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	</head>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const header = document.querySelector(".header");
+  const menuTop = document.querySelector(".menu-top");
+  const menuBottom = document.querySelector(".menu-bottom");
+
+  function updateUI() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    const hide = scrollTop > 10;
+
+    header?.classList.toggle("is-hidden", hide);
+    menuTop?.classList.toggle("is-hidden", hide);
+    menuBottom?.classList.toggle("is-hidden", hide);
+  }
+
+  window.addEventListener("scroll", updateUI);
+  updateUI(); // état initial
+
+});
+</script>
+
+<body>
+
+<header class="header">
+  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+  <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+</header>
+
+<nav class="menu-top">
+<p>
+  <a href="about.html">About</a>
+  <a href="my-work.html">Work</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+ </p>
+ <p>
+  <p class="menu-title">Offers</p>
+  <a href="give-time.html">Give time</a>
+  <a href="details.html">Details</a>
+</p>
+</nav>
 
 
- 	<body>
-
- 		<div id="h3">
- 		<div id="col2">
-		<a style="text-decoration:none" href="index.html">DELPHINE C. BERTRAND</a> <br><br>
-		visual artist<br>indoor landscape gardener<br><br> 
-		<a style="text-decoration:none" href="elena-cardin.html">TEXT BY ELENA CARDIN</a> <br><br> 
-
-		<div id="h1">
-		<a style="text-decoration:none" href="my-path.html">MY PATH</a> <br><br>
-		<a style="text-decoration:none" href="contact.html">CONTACT</a> <br><br> 
-		</div> </div><br><br><br>
-
- 		<div id="zone">
- 			
- 		Untiteld <i>(Fire Walk With Me)</i><br><br>
+<main class="page">
+<br>
 		
-		Various materials, beeswax, rapeseed wax, cotton wick, metal, ashes, lichen, cotton tulle, straw, birch leaves
+		<section class="project">
+
+		<img src="images/fire_walk_with_me/delphine_claire_bertrand_9536.jpg"class="image-projet"/><br><br>
+
+		<img src="images/fire_walk_with_me/delphine_claire_bertrand_9611.jpg"class="image-projet"/><br><br>
+
+		<img src="images/fire_walk_with_me/delphine_bertrand.jpg"class="image-projet"/>
+
+		<p>
+ 		<i>Fire Walk With Me</i><br><br> 	
+
+ 		Various materials, beeswax, rapeseed wax, cotton wick, metal, ashes, lichen, cotton tulle, straw, birch leaves
 
 		<br><br>
-		<i>Revolt Against the Sun!</i> Graduation Exhibition<br><br>
+		<i>Revolt Against the Sun!</i><br><br>
 		Curated by Chus Martínez and Margaux Bonopera<br><br>
 		Kunsthausbaselland, Switzerland<br>
 		August 2025<br><br><br>
 
-		Photographs : Christian Knörr<br><br><br>
-		
-		<img src="images/fire-walk-with-me/delphine_claire_bertrand_9520.jpg"class="image-projet"/><br><br>
+		Photographs : Christian Knörr
+ 		</p>
 
-		<img src="images/fire-walk-with-me/delphine_claire_bertrand_9529-2.jpg"class="image-projet"/><br><br>
-
-		<img src="images/fire-walk-with-me/delphine_claire_bertrand_9536.jpg"class="image-projet"/><br><br>
-
-		<img src="images/fire-walk-with-me/IMG_5497 2.jpg"class="image-projet"/><br><br>
-
-		<img src="images/fire-walk-with-me/IMG_5494 2.jpg"class="image-projet"/><br><br>
-
-		<img src="images/fire-walk-with-me/delphine_claire_bertrand_9611.jpg"class="image-projet"/><br><br>
-
-		<img src="images/fire-walk-with-me/IMG_5493 2.jpg"class="image-projet"/><br><br>
-
-		</div>
+	</section>
 
 
- 	</body>
+</main>
 
-
- </html>
+</body>
+</html>
