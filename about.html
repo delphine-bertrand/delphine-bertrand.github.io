@@ -3,64 +3,82 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Delphine Bertrand</title>
+  <title>About – Delphine Bertrand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const elements = document.querySelectorAll(".js-hide-on-scroll");
-
-  function update() {
-    const hide = window.scrollY > 10;
-
-    elements.forEach(el => {
-      el.classList.toggle("is-hidden", hide);
-    });
-  }
-
-  window.addEventListener("scroll", update);
-  update();
-
-});
-</script>
-
 <body>
 
-<header class="header js-hide-on-scroll">
-  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
-  <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
-</header>
+  <header class="header fade js-hide-on-scroll">
+    <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+    <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+  </header>
 
-<nav class="menu-top js-hide-on-scroll">
-<p>
-  <a href="about.html">About</a>
-  <a href="my-work.html">Work</a>
-  <a href="resume.html">Resume</a>
-  <a href="contact.html">Contact</a>
- </p>
- <p>
-  OFFER:
-  <a href="give-time.html">Give time</a>
-  <a href="details.html">Details</a>
-</p>
-</nav>
+  <nav class="menu fade js-hide-on-scroll">
 
-  <main class="page-content">
-  <section class="overlay-text">
+    <div class="menu-block">
+      <a href="about.html">About</a>
+      <a href="my-work.html">Work</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-  What if I started to trust myself… what difference would it make if I gave more importance, value and attention to my intuition?<br><br>
+    <div class="menu-block">
+      <a href="manifesto.html">MANIFESTO</a>
+      <span class="menu-title">Offer:</span>
+      <a href="give-time.html">Give Time</a>
+      <a href="details.html">Details</a>
+    </div>
 
-    Rather than listening to the outside world and responding to its clamour, what if I finally tried to sense and then hear my own voice, my own breath, my needs, my limits and my desires?<br><br>
+  </nav>
 
-    That is where my strength comes from, my source.<br><br>
+  <main class="page about-page">
 
-    This does not mean losing interest in the world, but rather embracing it fully, becoming part of it, and acting within it with greater awareness.<br><br>
+    <p>
+      Delphine Bertrand is a visual artist and performer whose practice unfolds between ritual, movement, installation, and forms of collective presence.
+    </p>
 
-    Have faith in awareness. Give time, offer time.
-  </section>
-</main>
+    <p>
+      Her work explores states of attention, intuition, transformation, and the fragile thresholds between inner experience and shared space.
+    </p>
+
+    <p>
+      Working with performance, natural materials, gesture, ceremony, weaving, and sculptural environments, she creates situations that invite slowness, receptivity, and embodied awareness.
+    </p>
+
+    <p>
+      Rather than producing fixed narratives, her work often opens spaces for encounter: places where perception can shift, where silence becomes active, and where participants are invited to reconnect with sensation, memory, and intuition.
+    </p>
+
+    <p>
+      Her practice is nourished by visual arts, ritual forms, movement-based practices, and an exploration of the relationships between inner ecology, psychology, and the natural world, considering art not only as an object, but as a lived experience.
+    </p>
+
+    <p>
+      She lives and works between Basel and Étables-sur-Mer.
+    </p>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const elements = document.querySelectorAll(".js-hide-on-scroll");
+
+      function update() {
+        const hide = window.scrollY > 10;
+
+        elements.forEach(el => {
+          el.classList.toggle("is-hidden", hide);
+        });
+      }
+
+      window.addEventListener("scroll", update);
+      update();
+
+    });
+  </script>
 
 </body>
 </html>

@@ -1,369 +1,382 @@
 /* =========================
-   BASE GLOBAL
+   RESET
 ========================= */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: Helvetica , Arial, sans-serif;
-  line-height: 1.6;
-  cursor: default;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #f8f6f2;
+  color: #111;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
 }
 
+/* =========================
+   HEADER (DISCRET)
+========================= */
+
+.header {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 100;
+}
+
+.logo {
+  font-family: "Courier New", monospace;
+  font-size: 32px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.subtitle {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+/* =========================
+   MENU (SOBRE)
+========================= */
+
+.menu {
+  position: fixed;
+  top: 120px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* 🔥 espace entre les 2 menus */
+  text-align: right;
+  z-index: 100;
+}
+
+/* chaque bloc */
+.menu-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* espace entre liens */
+}
+
+/* liens */
+.menu a {
+  display: block;
+  font-size: 16px; /* 🔥 plus grand */
+  text-decoration: none;
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+
+.menu a:hover {
+  opacity: 1;
+}
+
+/* titre "OFFER:" */
+.menu-title {
+  font-size: 16px;
+  color: inherit;
+  opacity: 0.85;
+  margin-bottom: 10px;
+  letter-spacing: 0.08em;
+}
+
+/* =========================
+   OFFER SECTION
+========================= */
+
+.offer-section {
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.offer-subtitle {
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
 /* =========================
    HOME (IMMERSIF)
 ========================= */
 
+.home {
+  background: #000;
+  color: white;
+}
+
+.home .bg-image {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.65);
+}
+
+.home .logo,
+.home .menu a {
+  color: white;
+}
+
 /* =========================
-   SCROLL HIDE GLOBAL
+   PAGE TEXTE
 ========================= */
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 180px 30px 120px;
+}
+
+.page p {
+  font-size: 18px;
+}
+
+
+/* =========================
+   OFFER PAGE
+========================= */
+
+.offer-page {
+  background: #d8cfbe;
+  color: #111;
+}
+
+.offer-page .menu-title {
+  color: inherit;
+}
+
+.offer-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 180px 30px 120px;
+}
+
+.offer-manifesto-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.offer-manifesto {
+  text-align: center;
+}
+
+.manifesto-title {
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+.offer-content p {
+  font-size: 18px;
+  margin-bottom: 42px;
+}
+
+.offer-navigation {
+  margin-top: 80px;
+}
+
+.offer-content a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+}
+
+@media (max-width: 768px) {
+  .offer-content {
+    padding: 170px 20px 100px;
+  }
+
+  .offer-content p {
+    font-size: 16px;
+  }
+
+  .offer-manifesto-page {
+    min-height: auto;
+    display: block;
+  }
+}
+
+/* =========================
+   PAGE CENTRÉE (MANIFESTE)
+========================= */
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center .content {
+  width: 50%;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+  max-width: 700px;
+}
+
+.about-page p {
+  margin-bottom: 42px;
+}
+
+
+/* =========================
+   WORK (GALERIE)
+========================= */
+
+.work {
+  padding-top: 180px;
+}
+
+.project {
+  margin-bottom: 140px;
+  text-align: center;
+}
+
+.project img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+}
+
+.caption {
+  font-size: 16px;
+  margin-top: 10px;
+  opacity: 0.5;
+}
+
+.page a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.page a:hover {
+  opacity: 1;
+}
+
+/* WORK TITLE */
+.work-title {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 120px;
+}
+
+.work a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* WORK layout */
+.work {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 180px 30px 120px;
+}
+
+.project img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+/* =========================
+   RESUME PAGE
+========================= */
+
+.resume-page {
+  max-width: 760px;
+}
+
+.resume-section {
+  margin-bottom: 90px;
+}
+
+.resume-section h2 {
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.08em;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.resume-section p {
+  margin-bottom: 28px;
+}
+/* =========================
+   SCROLL FADE
+========================= */
+
+.fade {
+  transition: opacity 0.4s ease;
+}
 
 .is-hidden {
   opacity: 0;
-  transform: translateY(-12px);
-  pointer-events: none;
-}
-
-/* animation fluide */
-.header,
-.menu-container,
-.menu-top,
-.menu-bottom {
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-
-body.home {
-  background: #cd5c5c;
-  color: white;
-}
-
-/* IMAGE FULLSCREEN */
-body.home .bg-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: 1;
-  filter: brightness(0.70);
-}
-
-/* HEADER */
-body.home .header {
-  position: fixed;
-  top: 60px;
-  left: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  z-index: 20;
-}
-
-
-/* LOGO HOME */
-body.home .logo {
-  color: white;
-  font-size: 60px;
-  letter-spacing: 0.03em;
-}
-
-/* SUBTITLE */
-body.home .subtitle {
-  font-size: 25px;
-  margin-top: 8px;
-  color: white;
-  opacity: 1;
-}
-
-/* MENU DROITE HOME */
-body.home .menu-container {
-  position: fixed;
-  top: 120px;
-  right: 120px;
-  z-index: 18;
-  display: flex;
-  flex-direction: column;
-  gap: 80px; /* espace entre les deux menus */
-}
-
-body.home .menu {
-  font-size: 25px;
-  opacity: 1;
-}
-
-body.home .menu a {
-  display: block;
-  color: white;
-  opacity: 0.85;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-  font-size: 25px;
-}
-
-body.home .menu a:hover {
-  opacity: 0.85;
-}
-
-/* CAPTION HOME */
-body.home .caption {
-  font-size: 16px;
-  opacity: 0.6;
-}
-
-
-
-/* =========================
-   PAGES PROJETS (DONNER DU TEMPS / DETAILS)
-========================= */
-
-
-/* TEXTES */
-.page p {
-  top: 300px;
-  color: #222;
-  font-size: 13px;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-
-/* =========================
-   PAGES EDITORIALES (ABOUT / WORK / ETC.)
-========================= */
-
-body {
-  background: #faf0e6;
-  color: #222;
-  font-weight: 300;
-  letter-spacing: 0.01em;
-}
-
-.page-content {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;  /* horizontal */
-  align-items: center;      /* vertical */
-  padding: 200px 40px 120px; /* espace pour éviter header/menu */
-  box-sizing: border-box;
-}
-
-.overlay-text {
-  width: 50%;
-  max-width: 700px;
-  text-align: center;
-}
-
-.header {
-  position: fixed;
-  top: 60px;
-  left: 60px;
-  z-index: 50;
-
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-
-
-/* LOGO PAGES */
-.logo {
-  text-decoration: none;
-  color: #111;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 40px;
-  letter-spacing: 0.02em;
-}
-
-/* SUBTITLE */
-.subtitle {
-  font-size: 18px;
-  margin-top: 8px;
-  color: #666;
-}
-
-/* PAGE CONTENT */
-.page {
-  max-width: 720px;
-  margin: 180px auto 100px;
-  padding: 0 40px;
-}
-
-/* TEXTES */
-
-
-.contenu {
-  width: 50%;              /* prend 50% de la largeur */
-  text-align: center;      /* centre le texte dedans */
-}
-
-.page p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-.page h1 {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 40px;
-}
-
-/* LEAD */
-.lead {
-  font-size: 18px;
-}
-
-/* CAPTION PAGES */
-.caption,
-.hero-caption {
-  font-size: 13px;
-  opacity: 0.6;
 }
 
 /* =========================
-   NAVIGATION (PAGES)
+   RESPONSIVE
 ========================= */
 
-/* =========================
-   MENU TOP RIGHT (OFFERS)
-========================= */
+@media (max-width: 768px) {
 
-.menu-top {
-  position: fixed;
-  top: 120px;
-  right: 120px;
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  color: #222;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+  .header {
+    position: static;
+    padding: 24px 20px 0;
+  }
 
+  .menu {
+    position: static;
+    padding: 40px 20px 0;
+    text-align: left;
+    gap: 32px;
+  }
 
+  .logo {
+    font-size: 24px;
+  }
 
-.menu-title {
-  font-size: 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color:  #222;
-  opacity: 0.80;
-  margin-bottom: 10px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
+  .subtitle {
+    font-size: 14px;
+  }
 
+  .page {
+    padding: 80px 20px 100px;
+  }
 
+  .work {
+    padding: 80px 20px 100px;
+  }
 
-.menu-top a {
-  display: block;
-  text-decoration: none;
-  opacity: 0.75;
-  margin-bottom: 6px;
-}
+  .work-title {
+    margin-bottom: 70px;
+  }
 
-.menu-top a:hover {
-  opacity: 1;
-}
+  .project {
+    margin-bottom: 90px;
+  }
 
-/* =========================
-   MENU BOTTOM CENTER
-========================= */
-
-.menu-bottom {
-  position: fixed;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 25px;
-  font-size: 16px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-
-
-.menu-bottom a {
-  text-decoration: none;
-  opacity: 0.75;
-  color: inherit;
-  
-}
-
-
-/* évite bleu/violet visited */
-a:visited {
-  color: inherit;
-}
-
-.menu-bottom a:hover {
-  opacity: 1;
-}
-
-/* CONTAINER */
-.curation {
-  padding-top: 180px;
-    max-width: 1200px;
-  margin: 0 auto;
-  
-}
-
-/* PROJET */
-.project {
-  margin-bottom: 180px;
-  text-align: center;
-  width: 60vw;
-}
-
-/* IMAGE */
-.project img {
-
-  width: 60vw;
-  max-width: 1100px;
-  align-items: center;
-  display: block;
-  margin: 40px auto;
-
-  transition: transform 0.6s ease, opacity 0.4s ease;
-}
-
-
-/* HOVER (très subtil) */
-.project a:hover img {
-  transform: scale(1.01);
-  opacity: 0.92;
-}
-
-/* CAPTION */
-.caption {
-  margin-top: 12px;
-
-  font-size: 16px;
-  opacity: 0.6;
-
-  letter-spacing: 0.02em;
-}
-
-
-.video {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  aspect-ratio: 16 / 9;
-  margin: 0 auto;
-}
-
-.video iframe {
-  width: 100%;
-  height: 100%;
-}
-
-
-/* =========================
-   TYPO GLOBALE
-========================= */
-
-h1, h2, h3 {
-  font-family: "Courier New", Courier, monospace;
-  font-weight: normal;
-  letter-spacing: 0.02em;
+  .center .content {
+    width: 90%;
+  }
 }

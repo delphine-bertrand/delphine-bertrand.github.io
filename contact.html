@@ -3,61 +3,78 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Delphine Bertrand</title>
+  <title>Contact – Delphine Bertrand</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+<body>
 
-  const elements = document.querySelectorAll(".js-hide-on-scroll");
+  <!-- HEADER -->
+  <header class="header fade js-hide-on-scroll">
+    <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+    <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+  </header>
 
-  function update() {
-    const hide = window.scrollY > 10;
+  <!-- MENU -->
+  <nav class="menu fade js-hide-on-scroll">
 
-    elements.forEach(el => {
-      el.classList.toggle("is-hidden", hide);
+    <div class="menu-block">
+      <a href="about.html">About</a>
+      <a href="my-work.html">Work</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="menu-block">
+      <a href="manifesto.html">MANIFESTO</a>
+      <span class="menu-title">Offer:</span>
+      <a href="give-time.html">Give Time</a>
+      <a href="details.html">Details</a>
+    </div>
+
+  </nav>
+
+  <!-- CONTENT -->
+  <main class="page">
+
+    <p>
+      Lives and works between Basel (CH) and Étables-sur-Mer (FR)
+    </p>
+
+    <p>
+      <a href="mailto:delphine.claire.bertrand@proton.me">
+        delphine.claire.bertrand@proton.me
+      </a>
+    </p>
+
+    <p>
+      <a href="tel:+33626157839">
+        +33 6 26 15 78 39
+      </a>
+    </p>
+
+  </main>
+
+  <!-- SCROLL FADE -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const elements = document.querySelectorAll(".js-hide-on-scroll");
+
+      function update() {
+        const hide = window.scrollY > 10;
+
+        elements.forEach(el => {
+          el.classList.toggle("is-hidden", hide);
+        });
+      }
+
+      window.addEventListener("scroll", update);
+      update();
+
     });
-  }
-
-  window.addEventListener("scroll", update);
-  update();
-
-});
-</script>
-
-<body>
-
-<header class="header js-hide-on-scroll">
-  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
-  <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
-</header>
-
-<nav class="menu-top js-hide-on-scroll">
-<p>
-  <a href="about.html">About</a>
-  <a href="my-work.html">Work</a>
-  <a href="resume.html">Resume</a>
-  <a href="contact.html">Contact</a>
- </p>
- <p>
-  OFFER:
-  <a href="give-time.html">Give time</a>
-  <a href="details.html">Details</a>
-</p>
-</nav>
-
-<main class="page">
-  <br> 
-  <p class="subtitle">Lives and works between Basel (CH) and Etables sur Mer (FR)</p>
-  <p class="subtitle">delphine.claire.bertrand@proton.me</p>
-  <p class="subtitle">+33 6 26 15 78 39</p>
-
-
-<body>
-
-
+  </script>
 
 </body>
 </html>

@@ -1,80 +1,126 @@
 <!DOCTYPE html>
+<html lang="en">
 
- <html>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const elements = document.querySelectorAll(".js-hide-on-scroll");
-
-  function update() {
-    const hide = window.scrollY > 10;
-
-    elements.forEach(el => {
-      el.classList.toggle("is-hidden", hide);
-    });
-  }
-
-  window.addEventListener("scroll", update);
-  update();
-
-});
-</script>
-
- <body class="home">
-
-<header class="header js-hide-on-scroll">
-  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
-  <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+<head>
+  <meta charset="utf-8">
+  <title>Give Time – Delphine Bertrand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-</header>
+</head>
 
-<div class="menu-container js-hide-on-scroll">
-  <nav class="menu">    
-    <a href="about.html">About</a>   
-    <a href="my-work.html">Work</a>
-    <a href="resume.html">Resume</a>
-    <a href="contact.html">Contact</a>
-  </nav>  
-  <nav class="menu">    
-    OFFER:
-    <a href="give-time.html">Give time</a>
-    <a href="details.html">Detail</a>
-    </nav></div>
+<body class="offer-page">
 
-<main class="hero">
+  <header class="header fade js-hide-on-scroll">
+    <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+    <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+  </header>
 
-<main class="page-content">
-  <section class="overlay-text">
+  <nav class="menu fade js-hide-on-scroll">
 
-Give Time <br><br>
+    <div class="menu-block">
+      <a href="about.html">About</a>
+      <a href="my-work.html">Work</a>
+      <a href="resume.html">Resume</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-Show <br><br>
+    <div class="menu-block">
+      <a href="manifesto.html">MANIFESTO</a>
+      <span class="menu-title">Offer:</span>
+      <a href="give-time.html">Give Time</a>
+      <a href="details.html">Details</a>
+    </div>
 
-* A clear space—a meadow—arranged in an installation composed with votive handmade candles or sculptures or different materials as flowers, sand, salt,… <br><br>
+  </nav>
 
-Or <br><br>
+  <main class="offer-content">
 
-Ceremony <br><br>
+    <section class="offer-section">
+      <p class="manifesto-title">Give Time</p>
 
-* A clear space—a meadow—arranged in an installation composed with votive handmade candles or sculptures or different materials as flowers, sand, salt,…<br>
-* The artist leads a ceremony or dance performance with Shin Shendo, allowing participants to experience a moment of peace and stillness. They will be given a moment of time.<br><br>
+      <p>
+        A commissioned artistic proposition conceived for a specific context, audience, or place.
+      </p>
 
+      <p>
+        Each project is developed in dialogue with the host environment and can take different forms depending on the intention, space, and participants involved.
+      </p>
+    </section>
 
-I am happy to offer my services for:<br>
-Companies<br>
-Private individuals<br>
-Schools<br>
-Exhibitions - Opening Receptions<br>
-Etcetera<br><br>
+    <section class="offer-section">
 
-Come to me for more information<br><br>
+      <p class="offer-subtitle">Show</p>
 
-<a href="contact.html">Contact</a><br><br>
+      <p>
+        A performative installation or spatial intervention conceived for a particular site.
+      </p>
 
-    
- </section>
-</main>
+      <p>
+        A temporary environment composed with handmade votive candles, sculpture, flowers, salt, sand, textiles, or other natural materials, creating a space of attention and transformation.
+      </p>
 
+    </section>
+
+    <section class="offer-section">
+
+      <p class="offer-subtitle">Ceremony</p>
+
+      <p>
+        A guided collective experience combining performance, movement, stillness, and ritual forms.
+      </p>
+
+      <p>
+        The ceremony may include Shin Shendo practice, dance, silence, gesture, and scenographic elements, offering participants a moment of pause, presence, and shared awareness.
+      </p>
+
+    </section>
+
+    <section class="offer-section">
+
+      <p class="offer-subtitle">Contexts</p>
+
+      <p>
+        Companies<br>
+        Private individuals<br>
+        Schools<br>
+        Exhibitions<br>
+        Opening receptions<br>
+        Festivals<br>
+        Site-specific commissions
+      </p>
+
+    </section>
+
+    <section class="offer-section">
+
+      <p>
+        Each proposal is developed individually.
+      </p>
+
+      <p>
+        <a href="contact.html">Contact me to discuss a project</a>
+      </p>
+
+    </section>
+
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".js-hide-on-scroll");
+
+      function update() {
+        const hide = window.scrollY > 10;
+
+        elements.forEach(el => {
+          el.classList.toggle("is-hidden", hide);
+        });
+      }
+
+      window.addEventListener("scroll", update);
+      update();
+    });
+  </script>
 
 </body>
+</html>
