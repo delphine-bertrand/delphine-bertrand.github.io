@@ -64,13 +64,13 @@ body.home .header {
 /* LOGO HOME */
 body.home .logo {
   color: white;
-  font-size: 40px;
+  font-size: 60px;
   letter-spacing: 0.03em;
 }
 
 /* SUBTITLE */
 body.home .subtitle {
-  font-size: 18px;
+  font-size: 25px;
   margin-top: 8px;
   color: white;
   opacity: 1;
@@ -88,7 +88,7 @@ body.home .menu-container {
 }
 
 body.home .menu {
-  font-size: 18px;
+  font-size: 25px;
   opacity: 1;
 }
 
@@ -98,7 +98,7 @@ body.home .menu a {
   opacity: 0.85;
   text-decoration: none;
   transition: opacity 0.2s ease;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 body.home .menu a:hover {
