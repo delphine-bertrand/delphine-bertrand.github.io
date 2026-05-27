@@ -93,29 +93,14 @@ document.addEventListener("DOMContentLoaded", function () {
       </p>
 
       <p class="offer-navigation">
-        <a href="give-time.html">Explore Give Time</a>
+        <a href="give-time.html"class="no-underline">Explore Give Time</a>
       </p>
 
     </section>
 
   </main>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const elements = document.querySelectorAll(".js-hide-on-scroll");
 
-      function update() {
-        const hide = window.scrollY > 10;
-
-        elements.forEach(el => {
-          el.classList.toggle("is-hidden", hide);
-        });
-      }
-
-      window.addEventListener("scroll", update);
-      update();
-    });
-  </script>
 
 </body>
 </html>
