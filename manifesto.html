@@ -3,36 +3,57 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Delphine Bertrand</title>
-
-  <!-- Responsive -->
+  <title>Give Time – Delphine Bertrand</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-<!-- =========================
-     HEADER
-========================= -->
-<header class="header fade">
-  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
-  <p class="subtitle">
-    Performance & Ceremony / Visual Arts & Nature
-  </p>
-</header>
+  const elements = document.querySelectorAll(".js-hide-on-scroll");
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const menu = document.querySelector(".menu");
 
-<!-- =========================
-     MENU DROITE
-========================= -->
-<nav class="menu fade js-hide-on-scroll">
+  function update() {
+    const hide = window.scrollY > 10;
+
+    elements.forEach(el => {
+      if (!menu || !menu.classList.contains("menu-open")) {
+        el.classList.toggle("is-hidden", hide);
+      }
+    });
+  }
+
+  window.addEventListener("scroll", update);
+  update();
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("menu-open");
+      toggle.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+
+<body class="manifesto-page">
+
+  <header class="header fade js-hide-on-scroll">
+    <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+    <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+  </header>
+
+  <button class="mobile-menu-toggle" aria-label="Open menu">~</button>
+
+  <nav class="menu fade js-hide-on-scroll">
 
     <div class="menu-block">
       <a href="about.html">About</a>
       <a href="my-work.html">Work</a>
-      <a href="resume.html">Resume</a>
+      <a href="biography.html">Biography</a>
       <a href="contact.html">Contact</a>
     </div>
 
@@ -45,12 +66,11 @@
 
   </nav>
 
-
   <main class="offer-content offer-manifesto-page">
 
     <section class="offer-manifesto">
 
-      <p class="manifesto-title">Offer</p>
+      <p class="manifesto-title">MANIFESTO</p>
 
       <p>
         What if I started to trust myself… what difference would it make if I gave more importance, value and attention to my intuition?

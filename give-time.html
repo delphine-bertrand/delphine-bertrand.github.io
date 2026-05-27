@@ -8,6 +8,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const elements = document.querySelectorAll(".js-hide-on-scroll");
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const menu = document.querySelector(".menu");
+
+  function update() {
+    const hide = window.scrollY > 10;
+
+    elements.forEach(el => {
+      if (!menu || !menu.classList.contains("menu-open")) {
+        el.classList.toggle("is-hidden", hide);
+      }
+    });
+  }
+
+  window.addEventListener("scroll", update);
+  update();
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("menu-open");
+      toggle.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+
+
 <body class="offer-page">
 
   <header class="header fade js-hide-on-scroll">
@@ -15,12 +47,14 @@
     <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
   </header>
 
+  <button class="mobile-menu-toggle" aria-label="Open menu">~</button>
+
   <nav class="menu fade js-hide-on-scroll">
 
     <div class="menu-block">
       <a href="about.html">About</a>
       <a href="my-work.html">Work</a>
-      <a href="resume.html">Resume</a>
+      <a href="biography.html">Biography</a>
       <a href="contact.html">Contact</a>
     </div>
 
@@ -104,23 +138,6 @@
     </section>
 
   </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const elements = document.querySelectorAll(".js-hide-on-scroll");
-
-      function update() {
-        const hide = window.scrollY > 10;
-
-        elements.forEach(el => {
-          el.classList.toggle("is-hidden", hide);
-        });
-      }
-
-      window.addEventListener("scroll", update);
-      update();
-    });
-  </script>
 
 </body>
 </html>

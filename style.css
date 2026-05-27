@@ -149,12 +149,16 @@ a:active {
 ========================= */
 
 .offer-page {
-  background: #d8cfbe;
+  background: #d8cfbe;;
   color: #111;
 }
 
 .offer-page .menu-title {
+  font-size: 16px;
   color: inherit;
+  opacity: 0.85;
+  margin-bottom: 10px;
+  letter-spacing: 0.08em;
 }
 
 .offer-content {
@@ -179,6 +183,17 @@ a:active {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 60px;
+}
+
+.manifesto-page {
+  background: #cd5c5c;
+  color: white;
+}
+
+
+.offer-page {
+  background: #d8cfbe;
+  color: #111;
 }
 
 .offer-content p {
@@ -431,11 +446,145 @@ a:active {
   }
 
   .home .menu-title {
-    font-size: 14px;
+    font-size: 16px;
     color: white;
   }
 
   .home .bg-image {
     filter: brightness(0.55);
   }
+}
+
+/* =========================
+   MOBILE MENU TOGGLE
+========================= */
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+
+  /* sauf home */
+  body:not(.home) .mobile-menu-toggle {
+    display: block;
+    position: fixed;
+    top: 22px;
+    right: 20px;
+    z-index: 500;
+
+    background: none;
+    border: none;
+    padding: 0;
+
+    font-family: "Courier New", monospace;
+    font-size: 36px;
+    line-height: 1;
+    color: #111;
+    cursor: pointer;
+  }
+
+  body:not(.home) .mobile-menu-toggle.active {
+    transform: rotate(45deg);
+  }
+
+  body:not(.home) .menu {
+    position: fixed;
+    inset: 0;
+    background: rgba(248, 246, 242, 0.98);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 50px;
+    text-align: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    z-index: 400;
+  }
+
+  body:not(.home) .menu.menu-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body:not(.home) .menu a {
+    font-size: 24px;
+  }
+
+  body:not(.home) .menu-title {
+    font-size: 16px;
+    opacity: 0.5;
+  }
+
+  body:not(.home) .header {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 0;
+    z-index: 500;
+  }
+
+  body:not(.home) .subtitle {
+    display: none;
+  }
+
+  body:not(.home) .page,
+  body:not(.home) .work,
+  body:not(.home) .offer-content {
+    padding-top: 140px;
+  }
+}
+
+/* =========================
+   MANIFESTO PAGE
+========================= */
+
+.manifesto-page {
+  background: #cd5c5c;
+  color: white;
+}
+
+.manifesto-page .logo,
+.manifesto-page .subtitle,
+.manifesto-page .menu a,
+.manifesto-page .menu-title,
+.manifesto-page .offer-content,
+.manifesto-page .offer-content a {
+  color: white;
+}
+
+.manifesto-page .offer-content a {
+  border-bottom: 1px solid white;
+}
+
+/* MOBILE MENU MANIFESTO */
+@media (max-width: 768px) {
+
+  .manifesto-page .mobile-menu-toggle {
+    color: #111 !important;
+    z-index: 600;
+  }
+
+  .manifesto-page .mobile-menu-toggle.active {
+    color: white !important;
+  }
+
+  .manifesto-page .menu {
+    background: #cd5c5c !important;
+  }
+
+  .manifesto-page .menu a,
+  .manifesto-page .menu-title {
+    color: white !important;
+  }
+
+.manifesto-page .mobile-menu-toggle {
+  color: white !important;
 }

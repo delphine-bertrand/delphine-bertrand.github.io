@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Delphine Bertrand</title>
+  <title>Give Time – Delphine Bertrand</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,41 +12,60 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   const elements = document.querySelectorAll(".js-hide-on-scroll");
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const menu = document.querySelector(".menu");
 
   function update() {
     const hide = window.scrollY > 10;
 
     elements.forEach(el => {
-      el.classList.toggle("is-hidden", hide);
+      if (!menu || !menu.classList.contains("menu-open")) {
+        el.classList.toggle("is-hidden", hide);
+      }
     });
   }
 
   window.addEventListener("scroll", update);
   update();
 
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("menu-open");
+      toggle.classList.toggle("active");
+    });
+  }
+
 });
 </script>
 
-<body>
 
-<header class="header js-hide-on-scroll">
-  <a class="logo" href="index.html">DELPHINE BERTRAND</a>
-  <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
-</header>
 
-<nav class="menu-top js-hide-on-scroll">
-<p>
-  <a href="about.html">About</a>
-  <a href="my-work.html">Work</a>
-  <a href="resume.html">Resume</a>
-  <a href="contact.html">Contact</a>
- </p>
- <p>
-  OFFER:
-  <a href="give-time.html">Give time</a>
-  <a href="details.html">Details</a>
-</p>
-</nav>
+<body class="offer-page">
+
+  <header class="header fade js-hide-on-scroll">
+    <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+    <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+  </header>
+
+  <button class="mobile-menu-toggle" aria-label="Open menu">~</button>
+
+  <nav class="menu fade js-hide-on-scroll">
+
+    <div class="menu-block">
+      <a href="about.html">About</a>
+      <a href="my-work.html">Work</a>
+      <a href="biography.html">Biography</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="menu-block">
+      <a href="manifesto.html">MANIFESTO</a>
+      <span class="menu-title">Offer:</span>
+      <a href="give-time.html">Give Time</a>
+      <a href="details.html">Details</a>
+    </div>
+
+  </nav>
 
 <main class="page">
 <br>

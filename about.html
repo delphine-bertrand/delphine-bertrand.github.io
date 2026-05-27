@@ -3,24 +3,58 @@
 
 <head>
   <meta charset="utf-8">
-  <title>About – Delphine Bertrand</title>
+  <title>Give Time – Delphine Bertrand</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const elements = document.querySelectorAll(".js-hide-on-scroll");
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const menu = document.querySelector(".menu");
+
+  function update() {
+    const hide = window.scrollY > 10;
+
+    elements.forEach(el => {
+      if (!menu || !menu.classList.contains("menu-open")) {
+        el.classList.toggle("is-hidden", hide);
+      }
+    });
+  }
+
+  window.addEventListener("scroll", update);
+  update();
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("menu-open");
+      toggle.classList.toggle("active");
+    });
+  }
+
+});
+</script>
+
+
+
+<body class="offer-page">
 
   <header class="header fade js-hide-on-scroll">
     <a class="logo" href="index.html">DELPHINE BERTRAND</a>
     <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
   </header>
 
+  <button class="mobile-menu-toggle" aria-label="Open menu">~</button>
+
   <nav class="menu fade js-hide-on-scroll">
 
     <div class="menu-block">
       <a href="about.html">About</a>
       <a href="my-work.html">Work</a>
-      <a href="resume.html">Resume</a>
+      <a href="biography.html">Biography</a>
       <a href="contact.html">Contact</a>
     </div>
 
