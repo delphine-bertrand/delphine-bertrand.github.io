@@ -187,10 +187,10 @@ a:active {
 
 
 .offer-page {
-  background: #E9DDC8;
+  background: #F8F6F2;;
   color: #111;
 }
-#f8f6f2
+#F8F6F2
 
 .offer-content p {
   font-size: 18px;
@@ -474,9 +474,10 @@ a:active {
     right: 20px;
     z-index: 500;
 
-    background: none;
+    background: #F8F6F2;
     border: none;
     padding: 0;
+
 
     font-family: "Courier New", monospace;
     font-size: 36px;
