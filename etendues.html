@@ -1,29 +1,81 @@
 <!DOCTYPE html>
 
- <html>
+<!DOCTYPE html>
+<html lang="en">
 
- 	<head>
- 		<meta charset="utf-8">
- 		<title>delphine bertrand</title>
- 		<link rel="stylesheet" href="style.css">
- 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
- 	</head>
+<head>
+  <meta charset="utf-8">
+  <title>Give Time – Delphine Bertrand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const elements = document.querySelectorAll(".js-hide-on-scroll");
+  const toggle = document.querySelector(".mobile-menu-toggle");
+  const menu = document.querySelector(".menu");
+
+  function update() {
+    const hide = window.scrollY > 10;
+
+    elements.forEach(el => {
+      if (!menu || !menu.classList.contains("menu-open")) {
+        el.classList.toggle("is-hidden", hide);
+      }
+    });
+  }
+
+  window.addEventListener("scroll", update);
+  update();
+
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("menu-open");
+      toggle.classList.toggle("active");
+    });
+  }
+
+});
+</script>
 
 
- 	<body>
 
- 		<div id="h3">
- 		<div id="col2">
-		<a style="text-decoration:none" href="index.html">DELPHINE C. BERTRAND</a> <br><br>
-		visual artist<br>indoor landscape gardener<br><br> 
-		<a style="text-decoration:none" href="elena-cardin.html">TEXT BY ELENA CARDIN</a> <br><br> 
+<body class="offer-page">
 
-		<div id="h1">
-		<a style="text-decoration:none" href="my-path.html">MY PATH</a> <br><br>
-		<a style="text-decoration:none" href="contact.html">CONTACT</a> <br><br> 
-		</div> </div><br><br><br>
- 		
- 		<div id="zone">
+  <header class="header fade js-hide-on-scroll">
+    <a class="logo" href="index.html">DELPHINE BERTRAND</a>
+    <p class="subtitle">Performance & Ceremony / Visual Arts & Nature</p>
+  </header>
+
+  <button class="mobile-menu-toggle" aria-label="Open menu">~</button>
+
+  <nav class="menu fade js-hide-on-scroll">
+
+  <div class="menu-block">
+    <a href="about.html">About</a>
+    <a href="my-work.html">Work</a>
+    <a href="biography.html">Biography</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <div class="menu-block manifesto-block">
+    <a href="manifesto.html">MANIFESTO</a>
+  </div>
+
+  <div class="menu-block offer-block">
+    <span class="menu-title">Offer:</span>
+    <a href="give-time.html">Give Time</a>
+    <a href="details.html">Details</a>
+  </div>
+
+</nav>
+
+<main class="page">
+<br>
+
+<section class="project">
 
  		<img src="images/etendues/dnsep salle2.jpg"class="image-projet"/><br><br>
 

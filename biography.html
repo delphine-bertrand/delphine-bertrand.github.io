@@ -49,28 +49,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <button class="mobile-menu-toggle" aria-label="Open menu">~</button>
 
-  <nav class="menu fade js-hide-on-scroll">
+ <nav class="menu fade js-hide-on-scroll">
 
-    <div class="menu-block">
-      <a href="about.html">About</a>
-      <a href="my-work.html">Work</a>
-      <a href="biography.html">Biography</a>
-      <a href="contact.html">Contact</a>
-    </div>
+  <div class="menu-block">
+    <a href="about.html">About</a>
+    <a href="my-work.html">Work</a>
+    <a href="biography.html">Biography</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <div class="menu-block">
-      <a href="manifesto.html">MANIFESTO</a>
-      <span class="menu-title">Offer:</span>
-      <a href="give-time.html">Give Time</a>
-      <a href="details.html">Details</a>
-    </div>
+  <div class="menu-block manifesto-block">
+    <a href="manifesto.html">MANIFESTO</a>
+  </div>
 
-  </nav>
+  <div class="menu-block offer-block">
+    <span class="menu-title">Offer:</span>
+    <a href="give-time.html">Give Time</a>
+    <a href="details.html">Details</a>
+  </div>
+
+</nav>
 
   <main class="page resume-page">
 
     <section class="resume-section">
-      <h2>Biography</h2>
+
+      <p class="offer-subtitle">Biography</p>
+
       <p>Born in 1995 in Zoetermeer (NL)</p>
     </section>
 
@@ -106,8 +111,14 @@ document.addEventListener("DOMContentLoaded", function () {
       <em>A friend of a friend of a friend</em>, Der Tank, Basel</p>
 
       <p><strong>2024–2019</strong><br>
-      La vie imaginaire / Jouer au réel / Voilà l’été / La Chance / La Grande Diagonale / Playgrounds / BOOM / Essayer de la sculpture</p>
+      <em>La vie imaginaire / Jouer au réel / Voilà l’été / La Chance / La Grande Diagonale / Playgrounds / BOOM / Essayer de la sculpture...</em></p>
     </section>
+
+
+
+
+
+
 
     <section class="resume-section">
       <h2>Residencies</h2>
@@ -173,33 +184,16 @@ document.addEventListener("DOMContentLoaded", function () {
       <p>
         Internship with Shin Shendo Weber<br>
         Assistant to Monster Chetwynd<br>
-        Weaving training<br>
+        Weaving training with Sylvie Boyer<br>
         Workshops with children<br>
         Workshops with adults<br>
-        Florist<br>
+        Florist at Rosebud Fleuristes<br>
         Assistant to Flora Moscovici<br>
         Internship with Daniel Dewar & Grégory Gicquel
       </p>
     </section>
 
   </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const elements = document.querySelectorAll(".js-hide-on-scroll");
-
-      function update() {
-        const hide = window.scrollY > 10;
-
-        elements.forEach(el => {
-          el.classList.toggle("is-hidden", hide);
-        });
-      }
-
-      window.addEventListener("scroll", update);
-      update();
-    });
-  </script>
 
 </body>
 </html>
